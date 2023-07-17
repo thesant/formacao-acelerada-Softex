@@ -1,0 +1,34 @@
+1) Faça um programa para uma loja de tintas. O programa deverá pedir o tamanho
+em metros quadrados da área a ser pintada. Considere que a cobertura da tinta é
+de 1 litro para cada 3 metros quadrados e que a tinta é vendida em latas de 18
+litros, que custam R$ 80,00. Informe ao usuário a quantidades de latas de tinta a
+serem compradas e o preço total.
+
+
+
+2) Escreva um programa em linguagem C ou JavaScript que converta um valor de
+temperatura em graus Fahrenheit para graus Celsius. Faça algumas simulações.
+a. Modifique o programa para perguntar ao usuário qual o tipo de
+conversão ele deseja fazer: 1) se Fahrenheit para graus Celsius ou o caso
+contrário, de Celsius para graus Fahrenheit. Obs: Quando solicitar a
+temperatura ao usuário, informar qual tipo de conversão está sendo
+utilizada.
+
+
+3) Faça um programa que
+a. Receba 4 números (variáveis diferentes) e mostre o maior, o menor, a
+média e a mediana.
+b. Mude o programa para aceitar apenas valores entre 0 e 10 (restringir a
+faixa numérica).
+c. Como poderíamos ‘ordenar’ de forma crescente esses números? Se
+aumentássemos o número de variáveis ou entradas para 10?
+
+
+4) Escreva um programa que crie um número aleatório x por meio da função
+rand(). O programa deve solicitar um número n ao usuário e compará-lo com x.
+Se n for menor do que x, o programa devera imprimir "Muito Pequeno" e
+solicitar novamente um número para o usuário; se n for maior do que x, o
+programa devera imprimir "Muito Grande" e solicitar número para o usuário. O
+programa terminara quando o usuário adivinhar o número x, tomado
+aleatoriamente, e devera imprimir "Correto" e o número de tentativas até o
+acerto.

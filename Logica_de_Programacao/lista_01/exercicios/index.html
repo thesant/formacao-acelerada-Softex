@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicios Softex</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+
+<body>
+
+    <ul class="pt-4 nav justify-content-center">
+        <li class="nav-item">
+            <h1>LISTA DE EXERCICIOS SOFTEX</h1>
+        </li>
+
+    </ul>
+
+    <div class="mt-5 container">
+        <div class="card">
+            <ul class="list-group">
+                <li class="list-group-item"><button class="btn" id="btndisplayOne" type="button">Questao 01 | Calcular area</button></li>
+                <li class="list-group-item"><button class="btn" id="btndisplaytwo" type="button">Questao 02 | Converter Temperatura</button></li></li>
+                <li class="list-group-item"><button class="btn" id="btndisplaytwo" type="button">Questao 03 | Calcular area</button></li></li></li>
+                <li class="list-group-item"><button class="btn" id="btndisplaytwo" type="button">Questao 04 | Calcular area</button></li></li></li>
+            </ul>
+        </div>
+    </div>
+
+    <ul id="conteudoOne" class="list-group" style="display: none;">
+        <li class="list-group-item">1) Faça um programa para uma loja de tintas. O programa deverá pedir o tamanho
+            em metros quadrados da área a ser pintada. Considere que a cobertura da tinta é
+            de 1 litro para cada 3 metros quadrados e que a tinta é vendida em latas de 18
+            litros, que custam R$ 80,00. Informe ao usuário a quantidades de latas de tinta a
+            serem compradas e o preço total.
+
+            <div class="mt-5 container card text-bg-light mb-3" style="max-width: 18rem;">
+                <div class="card-header">Calculadora</div>
+                <ul>
+                    <li>Valor lata de tinta: R$18</li>
+                    <li>metros por litro: 3m2</li>
+
+                </ul>
+                <p class="card-text"></p>
+                <div class="card-body">
+                    <h5 class="card-title">Informe a quantidade de metros quadrados</h5>
+                    <p class="card-text">
+                    <form id="form">
+                        <input type="text" id="number" class="form-control" placeholder="M2">
+                        <div class="text-end">
+                            <button id="btn-value" class=" btn btn-primary" type="submit">Calcular</button>
+                        </div>
+                    </form>
+                    </p>
+                    <p id="total">Total: </p>
+                </div>
+            </div>
+        </li>
+
+    </ul>
+    <ul id="conteudoTwo" class="list-group" style="display: none;">
+        <li class="list-group-item">2) Escreva um programa em linguagem C ou JavaScript que converta um valor de
+                    temperatura em graus Fahrenheit para graus Celsius. Faça algumas simulações.
+                    a. Modifique o programa para perguntar ao usuário qual o tipo de
+                    conversão ele deseja fazer: 1) se Fahrenheit para graus Celsius ou o caso
+                    contrário, de Celsius para graus Fahrenheit. Obs: Quando solicitar a
+                    temperatura ao usuário, informar qual tipo de conversão está sendo
+                    utilizada.
+
+            <div class="mt-5 container card text-bg-light mb-3" style="max-width: 18rem;">
+                <div class="card-header">Calculadora</div>
+                <p class="card-text"></p>
+                <div class="card-body">
+                    <h5 class="card-title">Insira um valor para conversão</h5>
+                    <p class="card-text">
+                    <form id="formTwo">
+                        <input type="text" id="numberTwo" class="form-control" placeholder="valor">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" value="1" >
+                            <label class="form-check-label" for="flexRadioDefault1">
+                               Celsius
+                            </label>
+                            </div>
+                            <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" value="2">
+                            <label class="form-check-label" for="flexRadioDefault2">
+                                Fahrenheit
+                            </label>
+                            </div>
+                        <div class="text-end">
+                            <button id="btnTwo" class=" btn btn-primary" type="submit">Calcular</button>
+                        </div>
+                    </form>
+                    </p>
+                    <p id="aa">Conversão feita: </p>
+                </div>
+            </div>
+        </li>
+
+    </ul>
+
+    <ul id="conteudoTwo" class="list-group" >
+        <li class="list-group-item">Faça um programa que
+        a. Receba 4 números (variáveis diferentes) e mostre o maior, o menor, a
+        média e a mediana.
+        b. Mude o programa para aceitar apenas valores entre 0 e 10 (restringir a
+        faixa numérica).
+        c. Como poderíamos ‘ordenar’ de forma crescente esses números? Se
+        aumentássemos o número de variáveis ou entradas para 10?
+
+            <div class="mt-5 container card text-bg-light mb-3" style="max-width: 18rem;">
+                <div class="card-header">Calculadora</div>
+                <p class="card-text"></p>
+                <div class="card-body">
+                    <h5 class="card-title">Insira os valores</h5>
+                    <p class="card-text">
+                    <form id="formTree">
+                       <label>Primeiro Valor</label>
+                        <input type="number" id="valueOne" class="form-control" placeholder="...">
+                        <label>Segundo Valor</label>
+                        <input type="number" id="valueTwo" class="form-control" placeholder="...">
+                        <label>Terceiro Valor</label>
+                        <input type="number" id="ValueTree" class="form-control" placeholder="...">
+                        <label>Quarto Valor</label>
+                        <input type="number" id="ValueFour" class="form-control" placeholder="...">
+                            
+                        <div class="mt-4 text-end">
+                            <button id="btnTree" class=" btn btn-primary" type="submit">Calcular</button>
+                        </div>
+                    </form>
+                    </p>
+                    <p id="aa">Conversão feita: </p>
+                </div>
+            </div>
+        </li>
+
+    </ul>
+
+</body>
+
+<script  src="exeOne.js"></script>
+</html>
