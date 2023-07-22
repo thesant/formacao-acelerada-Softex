@@ -1,1 +1,0 @@
-# formacao-acelerada-Softex
