@@ -1,9 +1,3 @@
----
-title: INSTRUÇÕES DO PROJETO
-created: '2023-07-27T00:07:30.102Z'
-modified: '2023-07-27T01:09:17.948Z'
----
-
 # INSTRUÇÕES DO PROJETO
 
 *Desenvolva, utilizando o Google Blockly, um programa que utiliza o nome de um aluno, duas notas e a quantidade de faltas que ele teve. Conclua se o aluno está aprovado ou reprovado de acordo com as especificações:*
