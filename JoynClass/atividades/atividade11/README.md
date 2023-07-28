@@ -26,23 +26,23 @@
   
   **codigo**
 
-  var quantidadeDeRodas, pesoBrutoKg, quantidadePessoas;
-
-
-  quantidadeDeRodas = Number(window.prompt('Infome o numero de rodas do veiculo:'));
-  pesoBrutoKg = Number(window.prompt('Infome o peso bruto em quilogramas (kg):'));
-  quantidadePessoas = Number(window.prompt('Infome  a quantidade de pessoas no veículo:'));
-  if (quantidadeDeRodas == 2 || quantidadeDeRodas == 3) {
-    window.alert('A melhor categoria de habilitacao e a : \'A\'');
-  } else if (quantidadeDeRodas == 4 && quantidadePessoas <= 8 && pesoBrutoKg <= 3500) {
-    window.alert('A melhor categoria de habilitacao e a : \'B\'');
-  } else if (quantidadeDeRodas >= 4 && pesoBrutoKg >= 3500 &&   pesoBrutoKg <= 6000) {
-   window.alert('A melhor categoria de habilitacao e a : \'C\'');
-  } else if (quantidadeDeRodas >= 4 && quantidadePessoas > 8) {
-  window.alert('A melhor categoria de habilitacao e a : \'D\'');
-  } else if (quantidadeDeRodas >= 4 && pesoBrutoKg > 6000) {
-  window.alert('A melhor categoria de habilitacao e a : \'E\'');
-  }
+    var quantidadeDeRodas, pesoBrutoKg, quantidadePessoas;
+  
+  
+    quantidadeDeRodas = Number(window.prompt('Infome o numero de rodas do veiculo:'));
+    pesoBrutoKg = Number(window.prompt('Infome o peso bruto em quilogramas (kg):'));
+    quantidadePessoas = Number(window.prompt('Infome  a quantidade de pessoas no veículo:'));
+    if (quantidadeDeRodas == 2 || quantidadeDeRodas == 3) {
+      window.alert('A melhor categoria de habilitacao e a : \'A\'');
+    } else if (quantidadeDeRodas == 4 && quantidadePessoas <= 8 && pesoBrutoKg <= 3500) {
+      window.alert('A melhor categoria de habilitacao e a : \'B\'');
+    } else if (quantidadeDeRodas >= 4 && pesoBrutoKg >= 3500 &&   pesoBrutoKg <= 6000) {
+     window.alert('A melhor categoria de habilitacao e a : \'C\'');
+    } else if (quantidadeDeRodas >= 4 && quantidadePessoas > 8) {
+    window.alert('A melhor categoria de habilitacao e a : \'D\'');
+    } else if (quantidadeDeRodas >= 4 && pesoBrutoKg > 6000) {
+    window.alert('A melhor categoria de habilitacao e a : \'E\'');
+    }
 
 
 
