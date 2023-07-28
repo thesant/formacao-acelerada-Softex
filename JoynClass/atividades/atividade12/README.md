@@ -1,9 +1,3 @@
----
-title: README
-created: '2023-07-28T00:37:21.937Z'
-modified: '2023-07-28T01:01:15.188Z'
----
-
 
 # INSTRUÇÕES DO PROJETO
 
