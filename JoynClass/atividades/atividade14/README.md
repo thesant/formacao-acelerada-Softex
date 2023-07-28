@@ -1,10 +1,3 @@
----
-tags: [Import-0860]
-title: 'INSTRUÇÕES DO PROJETO :'
-created: '2023-07-28T17:37:07.303Z'
-modified: '2023-07-28T19:08:30.661Z'
----
-
 # INSTRUÇÕES DO PROJETO :
 
 
