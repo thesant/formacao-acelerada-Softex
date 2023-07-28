@@ -1,8 +1,4 @@
----
-title: INSTRUÇÕES DO PROJETO
-created: '2023-07-27T23:31:12.917Z'
-modified: '2023-07-28T00:01:55.856Z'
----
+
 
 # INSTRUÇÕES DO PROJETO
 
