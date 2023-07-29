@@ -1,9 +1,3 @@
----
-title: 'DESAFIO:'
-created: '2023-07-29T00:39:42.404Z'
-modified: '2023-07-29T01:26:20.702Z'
----
-
 # DESAFIO:
 
 *Desenvolva um programa que recebe do usuário nome completo e ano de nascimento que seja entre 1922 e 2021. A partir dessas informações, o sistema mostrará o nome do usuário e a idade que completou, ou completará, no ano atual (2022).*
