@@ -31,7 +31,7 @@
                      ];
 
 
-        for(let i = 0; i <= nomes.length; i++){
+        for(let i = 0; i < nomes.length; i++){
         console.log('Nome: '+nomes[i]+' Idade: '+idades[i]+' Cor: '+cores[i]);
           console.log('--------------------------------------')
         }
