@@ -1,9 +1,3 @@
----
-title: 'DESAFIO:'
-created: '2023-07-29T00:39:42.404Z'
-modified: '2023-08-03T00:45:09.980Z'
----
-
 # DESAFIO:
 
 *Nesta atividade, você deve criar um código em JavaScript com uma matriz bidimensional para armazenar informações sobre animais e as suas características.*
