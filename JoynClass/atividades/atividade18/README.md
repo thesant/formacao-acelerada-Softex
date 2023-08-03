@@ -9,14 +9,11 @@
 ## Codigo:
 
     const pets = [
-    
-    ['Garfield', 'Gato', 10],
-    ['Pateta', 'Cachorro', 8],
-    ['Donald', 'Pato', 7]
-
+      ['Gato', 'Gato Persa', 10],
+      ['Cachorro', 'Bloodhound', 8],
+      ['Pato', 'Pato-Real', 7]
     ]
-
-
+    
     for (let i=0; i<pets.length;i++){
       console.log(`Nome: ${pets[i][0]}, Especie: ${pets[i][1]}, Idade: ${pets[i][2]}.`)
     }
