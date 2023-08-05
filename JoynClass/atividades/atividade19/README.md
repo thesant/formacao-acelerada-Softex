@@ -1,8 +1,3 @@
----
-title: 'DESAFIO:'
-created: '2023-07-29T00:39:42.404Z'
-modified: '2023-08-05T22:34:04.056Z'
----
 
 # DESAFIO:
 
