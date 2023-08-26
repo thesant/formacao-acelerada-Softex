@@ -1,0 +1,11 @@
+{
+  "name": "estudo",
+  "version": "1.0.0",
+  "description": "praticas com nodejs",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "samuel",
+  "license": "ISC"
+}
