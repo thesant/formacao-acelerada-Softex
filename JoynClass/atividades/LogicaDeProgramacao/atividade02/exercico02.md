@@ -1,0 +1,1 @@
+Ao observar a imagem do anexo dois percebi um padrão onde todas as linhas  tem 4 para 2 alunos de M e P, tanto para cima quanto para baixo, logo, nas linhas em que os alunos trocaram  ficou com 3 para 3 de cada disciplina.
