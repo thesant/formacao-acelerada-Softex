@@ -43,7 +43,6 @@ export default{
             return res.json({message: err.message});
         }
     },
-    
     async listClientByGender(req:Request, res: Response) {
         try{
             const {sexo} = req.params;
@@ -102,7 +101,7 @@ export default{
             return res.json({message: err.message});
         }
     },
-
+    
     async updateClient(req:Request, res: Response) {
         try{
             const {id, nome, sexo, idade, salario, cidade, estado} = req.body;
