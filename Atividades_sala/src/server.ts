@@ -14,6 +14,9 @@ app.get('/listClient/:id', clientController.listClient);
 app.put('/updateClient/:id', clientController.updateClient);
 app.delete('/deleteClient/:id', clientController.deleteClient);
 
+app.get('/listClientByGender/:sexo', clientController.listClientByGender);
+app.get('/listSalaryInquiry', clientController.listSalaryInquiry);
+
 app.listen(PORT,()=>{
     console.log('servidor ok');
 });

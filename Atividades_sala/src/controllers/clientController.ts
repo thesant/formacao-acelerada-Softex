@@ -7,15 +7,6 @@ export default{
         try {
 
             const {nome, sexo, idade, salario, cidade, estado} = req.body;
-            // const clientExist = await prisma.cliente.findUnique({ where: { nome: nome} });
-            
-            // if(clientExist){
-            //     return res.json({
-            //         error:true,
-            //         message: `Erro:  ${nome} usuario ja existe`
-            //     });
-            // }
-           
             const client = await prisma.cliente.create({
                 data: {
                     nome, sexo, idade, salario, cidade, estado
@@ -35,6 +26,65 @@ export default{
         try{
             const {id} = req.params;
             const clientExist = await prisma.cliente.findUnique({ where: { id: Number(id)} });
+            if(!clientExist){
+                return res.json({
+                    error: true,
+                    message:'Usuario nao encontrado',
+
+                });
+            }
+
+            return res.json({
+                error:false,
+                clientExist
+            });
+
+        } catch(err){
+            return res.json({message: err.message});
+        }
+    },
+    
+    async listClientByGender(req:Request, res: Response) {
+        try{
+            const {sexo} = req.params;
+            const clientExist = await prisma.cliente.findMany({ 
+                where: {
+                    sexo: sexo.toLowerCase(), 
+                },
+            });
+            if(!clientExist){
+                return res.json({
+                    error: true,
+                    message:'Usuario nao encontrado',
+
+                });
+            }
+
+            return res.json({
+                error:false,
+                clientExist
+            });
+
+        } catch(err){
+            return res.json({message: err.message});
+        }
+    },
+
+    async listSalaryInquiry(req:Request, res: Response) {
+        try{
+            const {salario} = req.params;
+            const clientExist = await prisma.cliente.findMany({ 
+                where: {
+                    salario: {
+                        gt: 3000 
+                    },
+                  
+                },
+
+                orderBy: {
+                    salario: 'desc',
+                },
+            });
             if(!clientExist){
                 return res.json({
                     error: true,
