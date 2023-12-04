@@ -3,12 +3,12 @@ import clientController from '../controllers/clientController';
 
 const router = express.Router();
 
-router.post('/createClient', clientController.createClient);
-router.get('/listClient/:id', clientController.listClient);
-router.put('/updateClient/:id', clientController.updateClient);
-router.delete('/deleteClient/:id', clientController.deleteClient);
+router.post('/api/v1/create-client', clientController.createClient);
+router.get('/api/v1/list-client/:id', clientController.listClient);
+router.put('/api/v1/update-client/:id', clientController.updateClient);
+router.delete('/api/v1/delete-client/:id', clientController.deleteClient);
 
-router.get('/listClientByGender/:sexo', clientController.listClientByGender);
-router.get('/listSalaryInquiry', clientController.listSalaryInquiry);
+router.get('/api/v1/list-client-by-gender/:sexo', clientController.listClientByGender);
+router.get('/api/v1/list-salary-inquiry', clientController.listSalaryInquiry);
 
 export default router;
