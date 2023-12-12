@@ -34,7 +34,7 @@ export default{
                 });
             }
 
-            return res.render('user',{
+            return res.render('cliente/clienteList',{
                 user: clientExist,
             });
 

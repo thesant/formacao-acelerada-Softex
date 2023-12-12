@@ -5,17 +5,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detalhes do Usuário</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
 </head>
 
-<body>
-    <h1>Detalhes do Usuário</h1>
-    <p>ID: <%= user.id %>
-    </p>
-    <p>Nome: <%= user.nome %>
-    </p>
-    <!-- Adicione mais campos conforme necessário -->
+<body class="bg-black">
 
-    <a href="/">Voltar</a>
+
+    <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+        <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+            <caption
+                class="p-5 text-lg font-semibold text-left rtl:text-right text-gray-900 bg-white dark:text-white dark:bg-gray-800">
+                Detalhes do Usuário
+                <p class="mt-1 text-sm font-normal text-gray-500 dark:text-gray-400"></p>
+            </caption>
+            <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                <tr>
+                    <th scope="col" class="px-6 py-3">
+                        ID
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        NOME
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        SEXO
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        IDADE
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        SALARIO
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        CIDADE
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        ESTADO
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        <span class="sr-only">Edit</span>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                    <td class="px-6 py-4">
+                        <%= user.id %>
+                    </td>
+                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                        <%= user.nome %>
+                    </th>
+                    <td class="px-6 py-4">
+                        <%= user.sexo %>
+                    </td>
+                    <td class="px-6 py-4">
+                        <%= user.idade %> anos
+                    </td>
+                    <td class="px-6 py-4">
+                        R$ <%= user.salario %>
+                    </td>
+                    <td class="px-6 py-4">
+                        <%= user.cidade %>
+                    </td>
+                    <td class="px-6 py-4">
+                        <%= user.estado %>
+                    </td>
+                    <td class="px-6 py-4 text-right">
+                        <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+
+    <div class="mt-5">
+        <a href="/"
+            class="text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Voltar</a>
+    </div>
 </body>
 
 </html>

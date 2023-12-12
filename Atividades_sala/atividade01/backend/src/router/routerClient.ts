@@ -3,14 +3,15 @@ import clientController from '../controllers/clientController';
 import {home} from '../controllers/homeController';
 import { produto } from '../controllers/produtoController';
 import { pdv } from '../controllers/pdvController';
-import {cliente} from '../controllers/clienteFrontController';
+import {cliente, clienteList} from '../controllers/clienteFrontController';
 
 const router = express.Router();
 
-router.get('', home);
+router.get('/', home);
 router.get('/produto', produto);
 router.get('/pdv', pdv);
 router.get('/cliente', cliente);
+router.post('/clienteList', clienteList);
 
 
 router.post('/api/v1/create-client', clientController.createClient);
