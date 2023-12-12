@@ -9,7 +9,7 @@ export default{
             const {nome, sexo, idade, salario, cidade, estado} = req.body;
             const client = await prisma.cliente.create({
                 data: {
-                    nome, sexo, idade, salario, cidade, estado
+                    nome, sexo,  idade: parseInt(idade), salario, cidade, estado
                 }
             });
 
@@ -34,9 +34,8 @@ export default{
                 });
             }
 
-            return res.json({
-                error:false,
-                clientExist
+            return res.render('user',{
+                user: clientExist,
             });
 
         } catch(err){

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="bg-black">
+
+    <div class="relative h-32 w-32 ...">
+        <div class="absolute inset-y-0 left-0 w-16 ...">
+            <div class="container mx-auto p-4 mt-8 text-white text-center border-2 w-52 h-96">
+                <h1 class="text-2xl font-bold mb-4">Menu</h1>
+                <ul class="list-disc list-none">
+                    <li class="mb-2">
+                        <a href="/produto">Cadastro de Produto</a>
+                    </li>
+                    <li class="mb-2">
+                        <div class="relative group">
+                            <!-- Botão principal -->
+                            <a id="dropdownButton" class=" " href="#">
+                                Clientes
+                            </a>
+
+                            <!-- Dropdown oculto por padrão -->
+                            <div id="dropdownContent"
+                                class="hidden absolute z-10 mt-2 bg-white border rounded-md shadow-lg">
+                                <!-- Opções do dropdown -->
+                                <a href="/cliente"
+                                    class="block px-4 py-2 text-gray-800 hover:bg-green-500 hover:text-white">Cadastrar</a>
+                                <a id="openModalButton" href="#"
+                                    class="block px-4 py-2 text-gray-800 hover:bg-green-500 hover:text-white">Listar</a>
+                            </div>
+                        </div>
+
+                    </li>
+                    <li class="mb-2">
+                        <a href="/pdv">PDV</a>
+                    </li>
+                    <!-- ... -->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Modal oculto por padrão -->
+    <div id="myModal" class="hidden fixed inset-0 z-10 overflow-y-auto">
+        <div class="flex items-center justify-center min-h-screen p-4">
+            <div class="modal-overlay absolute inset-0 bg-black opacity-50"></div>
+
+            <!-- Conteúdo do modal -->
+            <div class="modal-container bg-white w-11/12 md:max-w-md mx-auto rounded shadow-lg z-50 overflow-y-auto">
+                <!-- Conteúdo do modal aqui -->
+                <div class="modal-content py-4 text-left px-6">
+                    <div class="flex justify-between items-center pb-3">
+                        <p class="text-2xl font-bold">Meu Modal</p>
+                        <button id="closeModalButton"
+                            class="modal-close px-4 py-2 bg-red-500 text-white rounded-md">Fechar</button>
+                    </div>
+                    <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+                        <!-- Outros campos do formulário... -->
+
+                        <!-- Input para o ID do usuário -->
+                        <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="userId">
+                                Informe o ID do Usuário para Continuar:
+                            </label>
+                            <input
+                                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                id="userId" type="text" placeholder="Digite o ID do usuário">
+                        </div>
+
+                        <!-- Botão de envio -->
+                        <div class="flex items-center justify-between">
+                            <button
+                                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                                type="button">
+                                Enviar
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/interation.js"></script>
+</body>
+
+</html>

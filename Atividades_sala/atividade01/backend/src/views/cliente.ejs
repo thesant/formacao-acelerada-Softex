@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cliente</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-black">
+    <div class="container mx-auto p-4 mt-8">
+        <h1 class="text-2xl font-bold mb-4 text-white">Cadastro de Cliente</h1>
+
+        <form method="POST" action="/api/v1/create-client">
+            <div class="mb-4">
+                <label htmlFor="nome" class="block text-sm font-medium text-white">
+                    Nome:
+                </label>
+                <input type="text" id="nome" name="nome" value="" class="mt-1 p-2 border rounded-md w-full" required />
+            </div>
+
+            <div class="mb-4">
+                <label htmlFor="sexo" class="block text-sm font-medium text-white">
+                    Sexo:
+                </label>
+                <input type="text" id="sexo" name="sexo" value="" class="mt-1 p-2 border rounded-md w-full" required />
+            </div>
+
+
+            <div class="mb-4">
+                <label htmlFor="idade" class="block text-sm font-medium text-white">
+                    Idade:
+                </label>
+                <input type="number" id="idade" name="idade" value="" class="mt-1 p-2 border rounded-md w-full"
+                    required />
+            </div>
+
+            <div class="mb-4">
+                <label htmlFor="salario" class="block text-sm font-medium text-white">
+                    Salário:
+                </label>
+                <input type="number" step="0.01" id="salario" value="" name="salario"
+                    class="mt-1 p-2 border rounded-md w-full" required />
+            </div>
+
+            <div class="mb-4">
+                <label htmlFor="cidade" class="block text-sm font-medium text-white">
+                    Cidade:
+                </label>
+                <input type="text" id="cidade" name="cidade" value="" class="mt-1 p-2 border rounded-md w-full"
+                    required />
+            </div>
+
+            <div class="mb-4">
+                <label htmlFor="estado" class="block text-sm font-medium text-white">
+                    Estado:
+                </label>
+                <input type="text" id="estado" name="estado" value="" class="mt-1 p-2 border rounded-md w-full"
+                    required />
+            </div>
+
+            <button type="submit" class="bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600">
+                Cadastrar
+            </button>
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,7 +1,17 @@
 import  express  from 'express';
 import clientController from '../controllers/clientController';
+import {home} from '../controllers/homeController';
+import { produto } from '../controllers/produtoController';
+import { pdv } from '../controllers/pdvController';
+import {cliente} from '../controllers/clienteFrontController';
 
 const router = express.Router();
+
+router.get('', home);
+router.get('/produto', produto);
+router.get('/pdv', pdv);
+router.get('/cliente', cliente);
+
 
 router.post('/api/v1/create-client', clientController.createClient);
 router.get('/api/v1/list-client/:id', clientController.listClient);
