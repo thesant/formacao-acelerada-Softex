@@ -11,8 +11,6 @@
 
 <body class="bg-black">
 
-
-
     <nav class="border-gray-200 bg-gray-50 dark:bg-gray-800 dark:border-gray-700">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
             <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
@@ -39,8 +37,6 @@
             </div>
         </div>
     </nav>
-
-
 
     <div class="mt-10 relative overflow-x-auto shadow-md sm:rounded-lg">
 
@@ -128,58 +124,8 @@
                         </td>
                     </tr>
 
-                    <!-- Modal oculto por padrão -->
-                    <div id="myModal" class="hidden fixed inset-0 z-10 overflow-y-auto">
-                        <div class="flex items-center justify-center min-h-screen p-4">
-                            <div class="modal-overlay absolute inset-0 bg-black opacity-50"></div>
-
-                            <!-- Conteúdo do modal -->
-                            <div
-                                class="modal-container bg-white w-11/12 md:max-w-md mx-auto rounded shadow-lg z-50 overflow-y-auto">
-                                <!-- Conteúdo do modal aqui -->
-                                <div class="modal-content py-4 text-left px-6">
-                                    <div class="flex justify-between items-center pb-3">
-                                        <p class="text-2xl font-bold">Excluir Usuario</p>
-                                        <button id="closeModalButton"
-                                            class="modal-close px-4 py-2 bg-black text-white font-bold rounded-md">X</button>
-                                    </div>
-
-                                    <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" method="post"
-                                        action="/api/v1/delete-client/<%=user.id  %>">
-                                        <!-- Outros campos do formulário... -->
-
-                                        <!-- Input para o ID do usuário -->
-                                        <div class="mb-4">
-                                            <label class="block text-gray-700 text-sm font-bold mb-2" for="userId">
-                                                Informe o ID do Usuário para Continuar:
-                                            </label>
-
-                                        </div>
-
-                                        <!-- Botão de envio -->
-                                        <div class="flex items-center justify-between">
-                                            <button
-                                                class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-                                                type="submit">
-                                                Confimar
-                                            </button>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
                     <% }); %>
-            </tbody>
-        </table>
-    </div>
-
-
-
-
-
-    <script src="js/interation.js"></script>
+                        <script src="js/interation.js"></script>
 </body>
 
 </html>

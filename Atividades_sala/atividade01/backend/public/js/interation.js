@@ -6,7 +6,7 @@ dropdownButton.addEventListener('click', function () {
 });
 
 
-// Adicionar lógica JavaScript para mostrar/ocultar o modal
+// mostrar/ocultar modal
 const openModalButton = document.getElementById('openModalButton');
 const closeModalButton = document.getElementById('closeModalButton');
 const myModal = document.getElementById('myModal');
@@ -18,3 +18,4 @@ openModalButton.addEventListener('click', function () {
 closeModalButton.addEventListener('click', function () {
     myModal.classList.add('hidden');
 });
+

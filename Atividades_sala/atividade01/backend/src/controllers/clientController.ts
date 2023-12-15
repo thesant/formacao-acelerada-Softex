@@ -34,7 +34,7 @@ export default{
                 });
             }
 
-            return res.render('cliente/clienteList',{
+            return res.render('cliente/cliente-list',{
                 user: clientExist,
             });
 
@@ -118,7 +118,7 @@ export default{
                     id: Number(req.body.id)
                 },
                 data:{
-                    nome, sexo, idade, salario, cidade, estado
+                    nome, sexo, idade:parseInt(idade), salario, cidade, estado
                 }
             });
 
@@ -160,5 +160,20 @@ export default{
         } catch(err){
             return res.json({message: err.message});
         }
+    },
+
+    async updatePage (req:Request, res: Response){
+        const userId = parseInt(req.params.id);
+        const user = await prisma.cliente.findUnique({
+            where: {
+                id: userId,
+            },
+        });
+        res.render('cliente/cliente-update', {user});
+    
+    },
+
+    createPage(req:Request, res: Response){
+        res.render('cliente/cliente-create'); 
     }
 };
