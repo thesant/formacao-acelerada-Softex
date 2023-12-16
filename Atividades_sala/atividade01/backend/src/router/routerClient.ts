@@ -8,6 +8,9 @@ const router = express.Router();
 
 router.get('/', home);
 router.get('/produto', produtoController.menu);
+router.get('/api/v1/create-product', produtoController.createPage);
+router.post('/api/v1/create-product', produtoController.createProduct);
+
 router.get('/pdv', pdv);
 
 

@@ -13,7 +13,7 @@
 
     <nav class="border-gray-200 bg-gray-50 dark:bg-gray-800 dark:border-gray-700">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-            <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+            <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
                 <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">LOGO</span>
             </a>
             <div class="hidden w-full md:block md:w-auto" id="navbar-solid-bg">
@@ -38,11 +38,12 @@
         </div>
     </nav>
 
-    <div class="mt-10 relative overflow-x-auto shadow-md sm:rounded-lg">
 
+    <div class="mt-10 relative overflow-x-auto shadow-md sm:rounded-lg">
+        <p class="text-2xl text-center text-white">Menu Produtos</p>
         <div id="toast-top-right"
             class="fixed mt-12 space-x-4 text-gray-500 divide-x rtl:divide-x-reverse divide-gray-200 rounded-lg  top-8 right-5 ">
-            <a href="/api/v1/create-client"
+            <a href="/api/v1/create-product"
                 class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm p-2.5 text-center inline-flex items-center me-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                 <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
                     viewBox="0 0 14 10">
@@ -62,49 +63,45 @@
                         NOME
                     </th>
                     <th scope="col" class="px-6 py-3">
-                        SEXO
+                        VALOR
                     </th>
                     <th scope="col" class="px-6 py-3">
-                        IDADE
+                        ESTOQUE
                     </th>
                     <th scope="col" class="px-6 py-3">
-                        SALARIO
+                        CATEGORIA
                     </th>
                     <th scope="col" class="px-6 py-3">
-                        CIDADE
+                        DATA DA ULTIMA COMPRA
                     </th>
-                    <th scope="col" class="px-6 py-3">
-                        ESTADO
-                    </th>
+
                     <th scope="col" class="px-6 py-3">
                         Action
                     </th>
                 </tr>
             </thead>
             <tbody>
-                <% users.forEach(user=> { %>
+                <% products.forEach(product=> { %>
                     <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                         <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                            <%= user.id %> %>
+                            <%= product.id_produto %> %>
                         </th>
                         <td class="px-6 py-4">
-                            <%= user.nome %> %>
+                            <%= product.nome %> %>
                         </td>
                         <td class="px-6 py-4">
-                            <%= user.sexo %> %>
+                            R$ <%= product.valor %> %>
                         </td>
                         <td class="px-6 py-4">
-                            <%= user.idade %> %> anos
+                            <%= product.estoque_atual %> %> (uni.)
                         </td>
                         <td class="px-6 py-4">
-                            R$ <%= user.salario %> %>
+                            <%= product.categoria %> %>
                         </td>
                         <td class="px-6 py-4">
-                            <%= user.cidade %> %>
+                            <%= product.data_ultima_compra %> %>
                         </td>
-                        <td class="px-6 py-4">
-                            <%= user.estado %> %>
-                        </td>
+
                         <td class="px-6 py-4">
                             <a id="dropdownButton" href="#"
                                 class="font-medium text-blue-600 dark:text-blue-500 hover:underline"><svg
@@ -116,7 +113,7 @@
                             <div id="dropdownContent"
                                 class="hidden absolute z-10 mt-2 bg-white border rounded-md shadow-lg">
                                 <!-- Opções do dropdown -->
-                                <a href="/api/v1/update-client/<%= user.id %>"
+                                <a href="/api/v1/update-client/<%= product.id %>"
                                     class="block px-4 py-2 text-gray-800 hover:bg-green-500 hover:text-white">Editar</a>
                                 <a id="openModalButton" href="#"
                                     class="block px-4 py-2 text-gray-800 hover:bg-green-500 hover:text-white">Excluir</a>
