@@ -23,5 +23,9 @@ app.use(Express.static(path.resolve(dirname,'public'))); //lida com os arquivos 
 
 
 app.listen(process.env.PORT,()=>{
-    console.log('servidor ok');
+    console.log(`
+    Node version 20.10.0,
+    Starting development server at http://127.0.0.1:3300/
+    Quit the server with CONTROL-C.
+    `);
 });
