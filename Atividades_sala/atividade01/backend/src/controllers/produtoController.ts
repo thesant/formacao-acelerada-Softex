@@ -40,14 +40,14 @@ export default{
 
                 });
             }
-            const client = await prisma.cliente.update( {
+            const client = await prisma.produtos.update( {
                 where: {
-                    id: Number(req.body.id_produto)
+                    id_produto: Number(req.body.id_produto)
                 },
                 data:{
                     nome,
-                    valor: parseFloat(valor).toFixed(2),
-                    estoque_atual:parseInt(estoque_atual),
+                    valor,
+                    estoque_atual,
                     categoria
                 }
             });
@@ -58,7 +58,7 @@ export default{
                 message: `usuario com id ${id_produto} atualizado`
             });
         }catch(err){
-
+            return res.json({message: err.message});
         }
     },
 
