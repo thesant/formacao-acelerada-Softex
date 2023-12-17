@@ -1,7 +1,8 @@
 import  express  from 'express';
 import clientController from '../controllers/clientController';
-import {home} from '../controllers/homeController';
 import produtoController from '../controllers/produtoController';
+import pdvControllers from '../controllers/pdvController';
+import {home} from '../controllers/homeController';
 import { pdv } from '../controllers/pdvController';
 
 const router = express.Router();
@@ -10,10 +11,14 @@ router.get('/', home);
 router.get('/produto', produtoController.menu);
 router.get('/api/v1/create-product', produtoController.createPage);
 router.post('/api/v1/create-product', produtoController.createProduct);
+router.get('/api/v1/list-product/:id_produto', produtoController.listProduct);
+
+router.post('',);
 
 router.get('/pdv', pdv);
+router.post('/api/v1/create-venda', pdvControllers.createVenda);
 
-router.get('/api/v1/list-product/:id_produto', produtoController.listProduct);
+
 
 
 router.post('/api/v1/create-client', clientController.createClient);

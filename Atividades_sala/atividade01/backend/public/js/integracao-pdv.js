@@ -6,49 +6,40 @@ id.addEventListener('keypress', async (event) => {
         event.preventDefault();
         await obterNomeDoProduto();
         adicionarLinhaVenda();
+        atualizarSubtotal();
+       
     }
-    // if (vendas.length > 0) {
-    //     const descricaoVendaProduto = document.getElementById('descricaoVendaProduto');
-    //     const valorVendaProduto = document.getElementById('valorVendaProduto');
-        
-    //     descricaoVendaProduto.innerText = vendas[0].descricao;
-    //     valorVendaProduto.innerText = vendas[0].valor;
-    // } else {
-    //     console.log('Nenhum item de venda disponível.');
-    // }
     
 });
 
 function adicionarLinhaVenda() {
     const tabela = document.getElementById('table-vendas');
     const newRow = tabela.insertRow();
-    
+
     for (let i = 0; i < 6; i++) {
         const cell = newRow.insertCell(i);
         cell.innerText = ''; 
     }
     vendas.forEach((item) => {
 
-        verificarAdicionarClasseOverflow();
         newRow.cells[0].innerHTML  = `<p class="p-5 font-medium  whitespace-nowrap dark:text-black">${item.descricao }</p>`;
         newRow.cells[4].innerHTML = '<p class="p-5">1</p>';
         newRow.cells[5].innerHTML = `<p class="p-5 font-medium text-blue-600 dark:text-blue-500">${item.valor}</p>`;
+       
     });
 }
 
-function verificarAdicionarClasseOverflow() {
-    const tabela = document.getElementById('table-vendas'); // Substitua 'table-vendas' pelo ID correto da sua tabela
-
-    if (tabela.rows.length >= 3) {
-        tabela.classList.add( 'overflow-y-scroll');
-    } else {
-        tabela.classList.remove('overflow-y-scroll');
-    }
+function atualizarSubtotal() {
+    const subtotal = document.getElementById('subtotal');
+    const total = vendas.reduce((accumulator, currentValue) => accumulator + parseFloat(currentValue.valor), 0);
+    subtotal.innerHTML = total.toFixed(2);
+    
 }
-
 document.addEventListener('keypress', (event) => {
     if (event.key === 's') {
+        venda();
         imprimirVendas();
+        
     }
 });
 
@@ -99,4 +90,42 @@ function description(desc, value) {
 
     valor.innerHTML = `${value}`;
     descricao.innerHTML = `${desc}`;
+}
+
+function venda() {
+    const subtotal = document.getElementById('subtotal');
+    const valorSubtotal = subtotal.innerText;
+    const id_cliente = prompt('identifique o cliente: ');
+    const formaDePagamento = prompt('Forma de Pagamento: ');
+    
+    const apiUrl = '/api/v1/create-venda';
+    let data = {
+        'id_cliente': parseInt(id_cliente),
+        'forma_pgm': `${formaDePagamento}`,
+        'valor_total': parseInt(valorSubtotal)
+    };
+    fetch(apiUrl, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            
+        },
+        body: JSON.stringify(data),
+    })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log('Success:', data);
+        
+        })
+        .catch(error => {
+            console.error('Error:', error);
+    
+        });
+    
+    alert(`cod cliente: ${id_cliente} \n forma de pagamento: ${formaDePagamento}\n Subtotal ${valorSubtotal} `);
 }
