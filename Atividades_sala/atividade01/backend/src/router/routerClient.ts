@@ -13,6 +13,7 @@ router.post('/api/v1/create-product', produtoController.createProduct);
 
 router.get('/pdv', pdv);
 
+router.get('/api/v1/list-product/:id_produto', produtoController.listProduct);
 
 
 router.post('/api/v1/create-client', clientController.createClient);

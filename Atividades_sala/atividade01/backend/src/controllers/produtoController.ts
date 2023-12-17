@@ -9,6 +9,27 @@ export default{
         res.render('produto/produto-menu',{products}); 
     },
 
+    async listProduct(req:Request, res: Response) {
+        try{
+            const {id_produto} = req.params;
+            const productExist = await prisma.produtos.findUnique({ where: { id_produto: Number(id_produto)} });
+            if(!productExist){
+                return res.json({
+                    error: true,
+                    message:'Produto nao encontrado',
+
+                });
+            }
+
+            return res.json({
+                Produtos: productExist,
+            });
+
+        } catch(err){
+            return res.json({message: err.message});
+        }
+    },
+
     async createProduct(req:Request, res: Response){
         try {
 
